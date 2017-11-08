@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!--Give element id to access it in the Javascript-->
+		<h1 id="first"></h1>
+		<script type="text/javascript">
+			//This get the html element witht the id "first"
+
+			document.getElementById("first").innerHTML = "brownies are good";
+
+			//Concatenation
+			console.log(5 + 2);
+			console.log("I am " + 78 + " years old");
+			console.log("Number: " + 25 + 12);
+			console.log("Number: " + (25 + 12));
+
+
+			//Practice variables 
+			var x;
+			x = true;
+			console.log(x);
+
+			var y = "54";
+			console.log(y);
+
+			var input = prompt("What is your name");
+			console.log(input);
+
+			//Practicing number methods
+			//converts user input into a inter number 
+			var num = parseInt(prompt("Hey, Enter NUM"));
+
+			//PRACTISING STRING METHODS
+			var str = "Trey asking for text";
+			//length get amount of characters in string
+			console.log("str is length is: " + str.length);
+
+			//indexOf gets position of specified character
+			console.log("e is in position " + str.indexOf('e'));
+
+			//Charat get 
+			console.log("the first char of str is " + str.charAt(0));
+
+			var food = "watermelon";
+
+			//slice gets specified section of string 
+			// will return lon"
+
+			console.log( food.slice(7, food.length));
+			//will return "water"
+			console.log( food.slice(0, food.length/2) );
+			//will return "melon"
+			console.log( food.slice(food.lenth/2, food.length) );
+
+			var name = "Trey"
+			console.log(name);
+			//Will return "reyT"
+			console.log( name.slice(1) +name. charAt(0) );
+			document.getElementById("name").innerHTML = "Pig latin";
+
+
+			
+
+
+		</script>
+
+	</body>
+</html>
