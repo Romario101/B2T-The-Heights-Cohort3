@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pig Latin</title>
+	</head>
+	<body>
+
+		<h1 id="English"></h1>
+		<h1 id="Piglatin"></h1>
+
+
+		<script type="text/javascript">
+			var Input = "English word";
+			var Output = "Pig Latin Word";
+			
+			Input = prompt("Please enter a word");
+		 	// Prompt the user to enter information into the webpage
+		
+			Output = Input.slice(1,Input.length) + Input.charAt(0) + "ay";
+			// Convert input word and store it in output
+			
+		    document.getElementById("English").innerHTML = "The English word is " + Input;
+		   
+		    document.getElementById("Piglatin").innerHTML = "The Pig Latin word is " + Output;
+		    //Display "English word" and "Pig Latin word"
+
+		</script>
+
+	</body>
+</html>
