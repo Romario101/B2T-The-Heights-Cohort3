@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operators</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num = 2;
+			// prints false
+			console.log(num == 5); //checks if equal to
+
+			// prints true
+			console.log(num < 16); //checks if less than
+
+			// prints false
+			console.log(num > 16); //checks if greater than
+
+			//prints true
+			console.log(num != 5); //checks if not equal to
+
+			//prints true
+			console.log(num >= 2); //checks if greater than or equal to
+
+			//prints true
+			console.log(num === 2); //checks if AND data type is equal
+
+			//prints true
+			console.log(num == '2'); //checks if value is equal
+
+			//prints false
+			console.log(num === '2'); //checks if value AND data type is equal
+
+
+			
+			//BREAKDOWN: num == '2' && num > 5
+			//           true       && false
+			//prints false
+			console.log(num == '2' && num > 5);
+
+			//Breakdown:
+			//(num < 16) is true
+			//(num >= 2) is true 
+			//(num != 5) is true
+			//(true && true && true) is true
+			// prints true 2
+			console.log(num < 16 && num >= 2 && num != 5);
+
+			//BREAKDOWN:
+			//(num == '2') is true
+			//(num > 5) is false
+			//(true || false) is true
+			//prints true
+			console.log(num == '2' || num > 5);
+
+
+			var age = prompt('Enter an age');
+			if(parseInt(age) >= 25){
+				//only prints if age is greater than or equal to 25
+				console.log('You can rent a car!!');
+
+			}
+			else if(parseInt(age) >= 18){
+				console.log('You can at least buy a car');
+			}else{
+				console.log('no car for you');
+			}
+
+
+
+		</script>
+
+	</body>
+</html>
