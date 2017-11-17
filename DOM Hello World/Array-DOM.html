@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Array DOM</title>
 	</head>
 	<body>
-		<p id = basket></p>
+		<h1 id = basket></h1>
 		<script type="text/javascript">
-			var fruits = ["apple", "orange", "kiwi"]
-			fruits.toString();
-			fruits.join(" with ")
-			fruits = prompt("Add more fruits")
-			document.getElementById("basket").innerHMTL + fruits; 
-		</script>
+			var fruits = ["apple", "orange", "kiwi"];
+			//array list of fruits that are already being stored
 
+			var newfruits = prompt("Add more fruit");
+			//ask the user to enter more fruits
+
+			fruits.push(newfruits);
+			//push what the user entered to the end of the array using a other variable
+
+			fruits.sort();
+			//sort the everything in alphabetic order including the fruit that was added
+			
+			document.getElementById('basket').innerHTML = "Fruits: " + fruits.join(' with '); 
+			//Displays on the HTML webpage a list of fruits in alphabetic and 'with' between each element
+
+			
+
+			
+		</script>
+ 
 	</body>
 </html>

@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
+			
 			var num = 2;
 			// prints false
 			console.log(num == 5); //checks if equal to
@@ -65,7 +66,59 @@
 				console.log('no car for you');
 			}
 
+			var input = prompt("Do you like to win?");
+			//if (input == 'yes') is true, basketBallFan = 'Golden State'
+			//if (input == 'yes') is false, basketBallFan = 'Celtics'
+			var BaseketBallFan;
 
+			if(input == 'yes'){
+				BaseketBallFan = 'Golden State';
+			}else{
+				BaseketBallFan = ' Celtics';
+			}
+			
+			//var BaseketBallFan = (input == 'yes') ? 'Golden State' : 'Celtics';
+
+			switch(new Date().getMonth()){
+				case 8:
+					console.log('Its Sep');
+					break;
+				case 9:
+					console.log('Its Oct');
+					break;
+				case 10:
+					console.log('Its Nov');
+					break;
+				case 11:
+					console.log('Its Dec');
+					break;
+			}
+
+			//if pet is 'cat' print message
+			//if pet is 'dog' print message
+			//if pet is 'bird' print message
+			//if pet is none of the above print 'you have no soul'
+
+			var pet = prompt('What kind of pet do you have').toLowerCase();
+
+			switch(pet){
+				case 'cat':
+					console.log('you are a cat lover');
+					break;
+				case 'dog':
+					console.log('you are a dog lover');
+					break;
+				case 'bird':
+					console.log('you are a bird lover');
+					break;
+				default:
+					console.log('You have no soul');
+					//if pet is none you have no soul 
+					break;
+			}
+
+
+			
 
 		</script>
 
