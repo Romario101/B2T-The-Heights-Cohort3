@@ -41,6 +41,46 @@
 			}
 			counter++;
 		}
+
+		var sneakers = ['Adias', 'Jordans', 'Nike', 'Skechers', 'New Balance', 'Reebox'];
+		for(var i = 0; i < sneakers.length; i++){
+			console.log('At index: ' + i + ' I have the value ' + sneakers[i]);
+		}
+		var colors = ['red', 'white', 'black'];
+		for(var i = 0;  i < sneakers.length; i++){
+			if( 1%colors.length == 0){
+				console.log(sneakers[i] + ' has ' + colors[0] + 'laces');
+			}else if( i%colors.length == 1){
+				console.log(sneakers[i] + ' has ' + colors[1] + 'laces');
+			}else{
+				console.log(sneakers[i] + ' has ' + colors[2] + 'laces');
+			}
+		}
+
+		var nums = [8, 4, 1.7, 5, 23, -2];
+		var sum = 0;
+		for(var i=0; i < nums.length; i++){
+			sum += nums[i];
+		}
+		console.log('The sum is ' +sum);
+		/*
+		sum=0 | i=0 | num[i]=8
+			sum+=num[i]
+		sum=8 | i=1 | num[i]=4
+		 	sum+=num[i]
+		sum=12| i=2 | num[i]=1.7
+			sum+=num[i]
+		sum=13.7|i=3| num[i]=5
+			sum+=num[i]
+		sum=18.7|i=4| num[i]=23
+			sum+=num[i]
+		sum=41.7|i=5| num[i]=-2
+			sum+=num[i]
+		sum=39.7|i=6| STOP LOOP
+		*/
+
+	
+		
 		
 	</script>
 
