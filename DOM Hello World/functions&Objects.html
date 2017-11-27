@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<input type="text" placeholder="Enter a color" id = "mycolor"  onchange="changeBG()">
+		<img src="https://static.pexels.com/photos/20787/pexels-photo.jpg" width="400px" id='pic' onclick="switchimage()">
+		<br>
+
+		<!--Gets Name of Object-->
+		<input type="text" placeholder="Enter your name" id=name>
+		<!--Get Age for Object-->
+		<input type="number" placeholder="Age" id = age>
+
+		<input type="Button" value = "Create a Person" onclick="personButtonClicked()">
+
+
+
+		<script type="text/javascript">
+			function changeBG(){
+				document.bgColor = document.getElementById('mycolor').value;
+			}
+			function switchimage(){
+				var url1 = 'https://static.pexels.com/photos/20787/pexels-photo.jpg';
+				var url2 = 'http://vetsuppliesmag.com/media/k2/items/cache/ddfb9b15e570a6169be22cf2dc69112e_XL.jpg';
+
+				var image = document.getElementById('pic');
+				if (image.src == url1){
+					image.src = url2;
+				}else{
+					image.src = url1;
+				}
+				// The Below text does the exact same thing as the if statement
+				//image.src = (image. src == url1) ? url2 : url1;
+
+			}
+			function makePerson(n, a, g){
+				var person = {
+					name: n, 
+					age: a,
+					grades: g
+				}
+				return person;
+			}
+			//var p = makePerson('Thomas', 200, [62, 90, -7]);
+			
+
+			function personButtonClicked(){
+				var name = document.getElementById('name').value;
+				var age = document.getElementById('age').value;
+				var p = makePerson(name, age);
+
+				console.log('My name is ' + p.name + ', I am age ' + p.age);
+			}
+
+			var name = 'Kdot';
+
+			var obj = {
+				name: 'Drake',
+				printThisNAme: function(){ console.log(this.name) },
+				printName: function(){console.log(name) }
+			};
+			obj.printThisNAme(); // will print Drake
+
+			obj.printName(); // will print kDot
+
+			obj.color = 'red';
+			 
+			console.log(obj);
+		</script>
+
+	</body>
+</html>

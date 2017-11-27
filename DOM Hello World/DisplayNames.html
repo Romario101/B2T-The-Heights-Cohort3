@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Display Names</title>
+	</head>
+	<body>
+
+	<!--Form default shows Curtis jackson-->
+
+	<form id="myForm">
+		First name: <input type = "text" name="name" id = "fname" value = "Curtis">
+		<br>
+		Last name: <input type = "text" name="name" id = "lname" value = "Jackson">
+		<br>
+		<input type="submit" name = "Submit" onclick="DisName(); return false" >
+	</form>
+
+
+	<p id = "demo"></p>
+	<script type="text/javascript">
+
+		function DisName(){
+			var firstname = document.getElementById("fname").value;
+			var lastname = document.getElementById("lname").value;
+
+			document.getElementById('demo').innerHTML = "Hello " + firstname + ' ' + lastname;
+		}
+		//displays name entered when press submit with a "Hello"
+		
+	</script>
+
+	</body>
+</html>
