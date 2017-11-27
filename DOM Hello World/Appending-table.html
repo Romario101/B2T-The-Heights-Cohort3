@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html>
+	 <head>
+	 	<title>Appending Tables</title>
+	 </head>
+	 <body>
+
+	 <table id = "myTable" border = "1">
+	 	<tr>
+	 		<td>Clifford</td>
+	 		<td>Harris</td>
+	 	</tr>
+	 	<tr>
+	 		<td id = "c1" border = "1"></td>
+	 		<td id = "c2" border = "1"></td>
+	 
+	 	</tr>
+
+	 </table><br>
+	 <!--Default table that has a name already being display -->
+	 Column 1: <input type="text" id="col1" value = "Curtis"><br>
+	 Column 2: <input type="text" id="col2" value ="Jackson"><br> 
+	 
+
+	 <input type="button" onclick="insertRow()" value="Insert row">
+	 
+	 <script type="text/javascript">
+	 function insertRow(){
+	 	var column1 = document.getElementById('col1').value;
+	 	var column2 = document.getElementById('col2').value;
+	 	document.getElementById('c1').innerHTML = column1; 
+	 	document.getElementById('c2').innerHTML = column2; 
+	 // add what is submitted to the table into column1 and column 2
+
+	 }
+	
+
+	 	
+	 </script>
+	 
+	 </body>
+ </html>
