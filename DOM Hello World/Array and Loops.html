@@ -8,20 +8,32 @@
 		<script type="text/javascript">
 			var colors = ['Blue', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow'];
 			var suffix = ['th','st','nd','rd'];
-	
+			var index;
+			var position;
+
+			// join arrays togethers and looping it with the length of colors array
 			for(var i=0;  i < colors.length; i++){
-				console.log( i+1 + suffix[i] + ' choice is ' + colors[i]);
+			//switch statement switches the right suffix from the array and poisiton it the correct color choice
+			switch (i){
+				case 0: var position = suffix[1];
+					break;
+				case 1: var position = suffix[2];
+					break;
+				case 2: var position = suffix[3];
+					break;
 
-				switch(suffix[i]){
-				case 'th':
-					console.log('5th choice is Violet');
+				default: var position = suffix[0]
+					break;
 
 			}
+			console.log((index = i+1) + position  + ' choice is ' + colors[i]);
+			// display number with the suffix choice of color from first choice to last choice
 
-	
+		}
 
- 
-			}
+
+
+			
 
 			
 
