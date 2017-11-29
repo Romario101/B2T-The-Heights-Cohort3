@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object Library</title>
+	</head>
+	<body>
+	<h1 id="Book"></h1>
+
+	<script type="text/javascript">
+		var library = [
+		{ author: 'Bill Gates', title: 'The Road Ahead', readingstatus: true },
+		{ author: 'Steve Jobs', title: 'walter Issacson', readingstatus: true},
+		{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingstatus: false }
+		];
+		for (var i = 0; i < library.length; i++){
+			if (library[i].readingstatus == true){
+			document.getElementById('Book').innerHTML += 'Already read ' + library[i].title + ' by author: ' + library[i].author + ". <br>"; 
+				
+		}
+		else{
+			document.getElementById('Book').innerHTML += 'You still need to read ' + library[i].title + " by " + library[i].author + ". <br>";
+
+		}
+	}
+
+		
+				
+
+	</script>
+
+	</body>
+</html>

@@ -10,6 +10,7 @@
 			th{
 				width: 200px;
 				height: 200px;
+				font-size: 100px;
 			}
 			th:hover{
 				background-color: #cccccc;
@@ -19,26 +20,60 @@
 	<body>
 		<table>
 			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
 			</tr>
 			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
 			</tr>
 			<tr>
-				<th></th>
-				<th></th>
-				<th onclick="makeMove()"></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
+				<th onclick= "makeMoves(this)"></th>
 			</tr>
 		</table>
 
 		<script type="text/javascript">
 			var player = 'X';
-			function makeMove(){
-				console.log(player);
+			var gameWon = false;
+			function makeMoves(square){
+				//console.log(player);
+				//checks if square has been previously clicked
+				if(square.innerHTML == ''){
+					//sets text of square that has been clicked to player's symbol
+					square.innerHTML = player;
+
+					//see function created below
+					evalBoard();
+					if(gameWon){
+						player = '';
+					}
+					else if(player == 'X'){
+						player = 'O'
+					}else{
+						player = 'X'
+					}
+				}
+				
+				
+			}
+			function evalBoard(){
+				//gets an array of all the 'th' elements on our webpage
+				var board = document.getElementsByTagName('th');
+
+				//checking if player has won
+
+				var row1Win = board[0].innerHTML != '' && board[0].innerHTML == board[1].innerHTML && board[1].innerHTML == board[2].innerHTML;
+
+				var row2Win = board[3].innerHTML != '' && board[3].innerHTML == board[4].innerHTML && board[4].innerHTML == board[5].innerHTML;
+
+				if(!gameWon && (row1Win)||(row2Win)){
+					console.log(player + "won the game");
+					gameWon = true;
+				}
 			}
 		</script>
 
