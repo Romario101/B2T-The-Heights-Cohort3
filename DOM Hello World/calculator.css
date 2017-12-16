@@ -1,5 +1,6 @@
 body {
-	background: url(http://www.inkspilldesign.com/demo/wood-tile-background.jpg);
+	/*background: url(http://www.inkspilldesign.com/demo/wood-tile-background.jpg);*/
+	background-image:url(christmas-dark.png);
 	background-color: #424242;
 	font-family: Tahoma;
 }
@@ -24,7 +25,7 @@ body {
 	border-left: 2px solid #C1C1C1;
 	box-shadow: -3px 3px 7px rgba(0, 0, 0, .6), inset -100px 0px 100px rgba(255, 255, 255, .5);
 }
-
+/*
 #display {
 	display: block;
 	margin: 15px auto;
@@ -43,6 +44,7 @@ body {
 	text-align: right;
 	font-weight: 400;
 }
+*/
 
 .button {
 	display: inline-block;
